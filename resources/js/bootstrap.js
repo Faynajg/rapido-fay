@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import *  as logout from './logout' ;
 window._ = _;
 
 /**
@@ -22,6 +23,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // import Pusher from 'pusher-js';
 // window.Pusher = Pusher;
+import '../css/app.css'
+import * as bootstrap from 'bootstrap'
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',

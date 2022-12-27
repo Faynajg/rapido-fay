@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="">
 
 
-    <title>{{ $title ?? 'rapido.es'  }}</title>
-    @vite(['resources/css/app.css'])
+    <title>{{ $title ?? 'Rapido.es'  }}</title>
 
+    @livewireStyles
+    @vite(['resources/css/app.css'])
     {{ $style ?? '' }}
 
 </head>
@@ -18,6 +19,7 @@
     {{ $slot }}
 
     <x-footer/>
+    @livewireScripts
     @vite (['resources/js/app.js'])
     {{ $script ?? '' }}
 

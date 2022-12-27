@@ -18,4 +18,9 @@ class AdController extends Controller
         return view ('ad.create');
 
     }
+
+    public function show(Ad $ad)
+    {
+        return view('ad.show',compact('ad'));
+    }
 }

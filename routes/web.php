@@ -34,3 +34,8 @@ Route::get('/ads/{ad}', [AdController::class, 'show'])->name("ads.show");
 Route::get('/revisor',[RevisorController::class, 'index'])->name('revisor.home');
 Route::patch('/revisor/ad/{ad}/accept',[RevisorController::class,'acceptAd'])->name('revisor.ad.accept');
 Route::patch('/revisor/ad/{ad}/reject',[RevisorController::class,'rejectAd'])->name('revisor.ad.reject');
+
+Route::get('revisor/become',[RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('revisor.become');
+Route::get('revisor/{user}/make',[RevisorController::class, 'makeRevisor'])->middleware('auth')->name('revisor.make');
+
+Route::post('/locale/{locale}', [PublicController::class, 'setLocale'])->name('Locale.set');

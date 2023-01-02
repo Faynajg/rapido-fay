@@ -1,9 +1,9 @@
 <x-layout>
-   <x-slot name='title'>Rapido -ads </x -slot> 
+   <x-slot name='title'>Rapido</x -slot> 
    <div class="container">
       <div class="row">
          <div class="col-12">
-       <h1>{{__('Bienvenido a rapido.es')}}</h1>
+         <h1>{{__('Bienvenido a rapido.es')}}</h1>
          </div>
       </div>
       <div class="row">
@@ -25,7 +25,7 @@
                   <div class="card-subtitle mb-2"> 
                      <small>{{ $ad->user->name }}</small> 
                   </div>
-                  <a href="{{route('ads.show', $ad)}}" >Mostrar Más</a>
+                  <a href="{{route('ads.show', $ad)}}" >{{__('Mostrar Más')}}</a>
                </div>
             </div>
          </div>

@@ -28,14 +28,14 @@
         </li>
         @endif
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">Nuevo Anuncio</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('ads.create') }}">{{__('Nuevo anuncio')}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
+          {{__('Categorias')}}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             @foreach ($categories as $category)

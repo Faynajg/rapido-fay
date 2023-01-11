@@ -1,2 +1,68 @@
 @import '~bootstrap/dist/css/bootstrap';
 @import '~flag-icon-css/css/flag-icons';
+
+body {
+    background-color: #ECEFF1;
+    color: #643045;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+#nav-principal {
+    background-color:#C2185B;
+    color: white;
+
+}
+
+footer {
+    background-color:#C2185B ;
+    color: white;
+}
+
+
+#titulo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #C2185B;
+}
+
+#propietario {
+    margin-top: 10px;
+}
+ .boton-violeta{
+    color: white;
+    background-color: #6A1B9A;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+
+ }
+ .boton-violeta :hover{
+    color: white;
+    background-color: #6A1B9A;
+ }
+ .boton-search{
+    background-color: #E91E63;
+    border: 1px solid white;
+    color: white;
+
+ }
+ .boton-search::placeholder { 
+    color: white;
+    opacity: 1; 
+}
+
+.boton-search:-ms-input-placeholder { 
+    color: white;
+}
+
+.boton-search::-ms-input-placeholder { 
+    color: white;
+}

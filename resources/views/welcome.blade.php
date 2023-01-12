@@ -3,7 +3,7 @@
    <div class="container">
       <div class="row">
          <div class="col-12" id="titulo">
-         <h1 >{{__('Bienvenido a rapido.es')}}</h1>
+         <h3 >{{__('Bienvenido a Rapido.es')}}</h3>
          </div>
       </div>
       <div class="row">

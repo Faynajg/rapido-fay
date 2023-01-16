@@ -1,5 +1,5 @@
 <footer>
-   <div class="py-5 ">
+   <div class="py-5  ">
       <div class="container-fluid">
          <div class="row">
             <div class="col-12 col-md-6 "> {{__('Desarrollado por hackademy')}}

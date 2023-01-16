@@ -10,9 +10,11 @@
          @forelse($ads as $ad)
         
          <div class="col-12 col-md-4" >
-            <div class="card mb-5 shadow-sm" style="height:520px;">
+            <div class="card mb-5 shadow-sm" style="height:610px;">
             @if ($ad->images()->count() > 0)
-               <img src=" {{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) : 'https://via.placeholder.com/150' }}" class="card-img-top" width="200" height="250" alt="..."/>
+            <img src="{{$ad->images()->first()->getUrl(400,300)}}" class="card-img-top" alt="">
+            @else
+            <img src="https://via.placeholder.com/150" class="card-img-top"  alt="">
                @endif
                <div class="card-body">
                   <h5 class="card-title"> {{$ad->title}}</h5>

@@ -16,7 +16,7 @@ class ResizeImage implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
     private $path, $fileName, $w, $h;
 
-    /** 
+    /**
      * Create a new job instance.
      *
      * @return void
@@ -29,7 +29,7 @@ class ResizeImage implements ShouldQueue
         $this->h = $h;
     }
 
-    /** 
+    /**
      * Execute the job.
      *
      * @return void
@@ -40,7 +40,7 @@ class ResizeImage implements ShouldQueue
         $h = $this->h;
 
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
-        $destPath = storagepath() . '/app/public/' . $this->path . "/crop{$w}x{$h}_" . $this->fileName;
+        $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
         $croppedImage = Image::load($srcPath)
             ->crop(Manipulations::CROP_CENTER, $w, $h)
             ->save($destPath);

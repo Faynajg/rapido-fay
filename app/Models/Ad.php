@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Image;
 
+
 class Ad extends Model
 {
     protected $fillable = ['title', 'body', 'price'];

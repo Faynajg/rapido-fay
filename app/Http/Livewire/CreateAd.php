@@ -9,6 +9,8 @@ use App\Models\Category;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 use App\Jobs\GoogleVisionSafeSearchImage;
+use App\Jobs\GoogleVisionLabelImage;
+
 
 
 class CreateAd extends Component
@@ -67,6 +69,8 @@ class CreateAd extends Component
                     ]);
                     dispatch(new ResizeImage($newImage->path,400,400));
                     dispatch(new GoogleVisionSafeSearchImage($newImage->id));
+                    dispatch(new GoogleVisionLabelImage($newImage->id));
+
 
                     
                 }

@@ -1,17 +1,17 @@
 <x-layout>
-   <x-slot name='title'>{{$category->name}}  </x -slot> 
+   <x-slot name='title'> </x -slot> 
    <div class="container">
       <div class="row">
          <div class="col-12">
-            <h1>Anuncios por categoria: {{$category->name}} </h1>
+            <h1 style="margin-top:20px; margin-bottom:30px;">Anuncios por categoria: {{$category->name}} </h1>
          </div>
       </div>
       <div class="row">
          @forelse($ads as $ad)
          <div class="col-12 col-md-4">
-            <div class="card mb-5" style="height:500px">
+            <div class="card mb-5" style="height:650px">
             @if ($ad->images()->count() > 0)
-               <img src=" {{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : 'https://via.placeholder.com/150' }}" class="card-img-top" alt="...">
+               <img src=" {{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150' }}" class="card-img-top" alt="...">
                @endif
                <div class="card-body">
                   <h5 class="card-title"> {{$ad->title}}</h5>

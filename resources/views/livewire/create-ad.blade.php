@@ -1,5 +1,5 @@
 <div>
-    <h1>Create new Ad</h1>
+    <h3 style="margin-bottom:20px">Crear Anuncio</h3>
 
     <div>
         @if(session()->has('message'))
@@ -18,7 +18,7 @@
             
         </div>
         <div class="mb-3"> 
-            <label for="price" class="form-label">Price:</label>
+            <label for="price" class="form-label">Precio:</label>
             <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror">
             @error('price')
                 {{$message}}
@@ -32,9 +32,9 @@
             @enderror 
         </div>
         <div class="mb-3">
-            <label for="category" class="form-label">Category:</label>
+            <label for="category" class="form-label">Categoria:</label>
             <select wire:model.defer="category" class="form-control">
-                <option value="">Select Category</option>
+                <option value="">Seleccion de Categoria</option>
                 @foreach ($categories as $category)
                 <option value="{{$category->id }}">{{ $category->name }}</option>
                 @endforeach
@@ -63,7 +63,7 @@
 </div>
 @endif
 
-        <div class="my-3"> <button type="submit" class="btn btn-info">Crear</button>
+        <div class="my-4"> <button type="submit" class="boton-violeta  boton-padding ">Crear</button>
         </div>
     </form>
     </div>

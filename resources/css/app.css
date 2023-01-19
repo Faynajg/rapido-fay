@@ -3,6 +3,7 @@
 @import '~bootstrap-icons/font/bootstrap-icons';
 
 body {
+    height: 100vh;
     background-color: #ECEFF1;
     color: #643045;
     font-family: 'Roboto', sans-serif;
@@ -14,6 +15,7 @@ body {
 #nav-principal {
     background-color:#C2185B;
     color: white;
+
 
 }
 
@@ -85,4 +87,18 @@ footer {
 } 
 .UNKNOWN {
     color: grey;
+}
+
+.sin_decoracion {
+    text-decoration: none;
+    color: white;
+}
+.sin_decoracion:hover{
+    text-decoration: none;
+    color: white;
+}
+.boton-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+
 }

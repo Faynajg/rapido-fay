@@ -35,12 +35,7 @@ class RevisorController extends Controller
           return redirect()->back()->withMessage(['type'=>'danger','text'=>'Anuncio rechazado']); 
      } 
 
-     public function becomeRevisor()
-     {
-        Mail::to('admin@rapido.es')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Solcitud enviada con éxito,
-        pronto sabras algo,gracias!']);
-     }
+     
      public function makeRevisor(User $user)
      {
         Artisan::call('rapido:makeUserRevisor',['email'=>$user->email]);

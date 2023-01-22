@@ -1,5 +1,5 @@
 <x-layout>
-   <div class="container">
+   <div class="container" style="height:68vh;">
       <div class="row my-5">
          <div class="col-12 col-md-6">
             <div id="adImages" class="carousel slide" data-bs-ride="true">
@@ -11,7 +11,7 @@
                <div class="carousel-inner">
                 @foreach ($ad->images as $image)
                   <div class="carousel-item @if($loop->first) active @endif">
-                     <img src="{{$image->getUrl(400,400)}}" class="d-block w-100" alt="... ">
+                     <img src="{{$image->getUrl()}}" class="d-block w-100" width="300" height="400" alt="... ">
                     </div>
                 @endforeach
                 </div>
@@ -25,7 +25,7 @@
                </button> 
             </div>
          </div>
-         <div class="col-12 col-md-6">
+         <div class="col-12 col-md-6 card p-5">
             <div style="margin-bottom:10px;"><b>{{__('Título')}}:</b> {{$ad->title}}</div>
             <div style="margin-bottom:10px;"><b>{{__('Precio')}}:</b> {{$ad->price}}</div>
             <div style="margin-bottom:10px;"><b>{{__('Descripción')}}:</b> {{$ad->body}}</div>

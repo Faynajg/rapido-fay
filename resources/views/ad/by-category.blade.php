@@ -11,7 +11,7 @@
          <div class="col-12 col-md-4">
             <div class="card mb-5" style="height:650px">
             @if ($ad->images()->count() > 0)
-               <img src=" {{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,400) : 'https://via.placeholder.com/150' }}" class="card-img-top" alt="...">
+               <img src=" {{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl() : 'https://via.placeholder.com/150' }}" class="card-img-top" width="300" height="300" alt="...">
                @endif
                <div class="card-body">
                   <h5 class="card-title"> {{$ad->title}}</h5>
@@ -32,10 +32,10 @@
          {{$ads->links()}}
          @empty
          <div class="col-12">
-            <h2>Uyy.. parece que no hay nada de esta categoria </h2>
-            <a href="{{$ads->links()}}" class="btn btn-danger">Fragmento</a> o  
-            <a href="{{route('ads.create')}}" class="btn btn-success">Vende tu primer objeto</a> o 
-            <a href="{{route('home')}}" class="btn btn-primary">Vuelve a la home </a>
+            <h2>{{__('Uyy.. parece que no hay nada de esta categoria')}}</h2>
+            <a href="{{$ads->links()}}" class="btn btn-danger">{{__('Fragmento')}}</a> o  
+            <a href="{{route('ads.create')}}" class="btn btn-success">{{__('Vende tu primer objeto')}}</a> o 
+            <a href="{{route('home')}}" class="btn btn-primary">{{__('Vuelve a la home')}} </a>
          </div>
          @endforelse
       </div>

@@ -1,10 +1,10 @@
 {
-    "Bienvenido a Rapido.es": "Welcome to Rapido.es",
+    "Bienvenido a Fast.es": "Welcome to Fast.es",
     "Categorias":"Categories",
     "coches":"cars",
     "motos":"motorbikes",
     "hogar":"home",
-    "electrónica":"electronics",
+    "electronica":"electronics",
     "móviles":"smartphones",
     "ordenadores":"computers",
     "Mostrar Más":"Show More",
@@ -34,7 +34,7 @@
     "Donde estamos":"where we are",
     "Tu correo":"Your email",
     "Tu contraseña":"Your Passoword",
-    "¿Aún no eres de los nuestros?":"Your're still not a member?",
+    "¿Todavía no eres de los nuestros?":"Your're still not a member?",
     "¡Registrate!":"Sign Up!",
     "¿Ya eres de los nuestros?":"You are already a member?",
     "¡Entra ya!":"Log In",
@@ -44,9 +44,9 @@
     "Aceptar":"Accept",
     "Desarrollado por":"Powered by",
     "Política de privacidad":"Privacy policy",
-    "Trabaja con nosotros":"Work with us",
     "Revisar Anuncios":"Review ads",
-    "Desarrollado por hackademy": "Powered by hackademy"
+    "Desarrollado por hackademy": "Powered by hackademy",
+    "Buscar": "Search"
 
  
 

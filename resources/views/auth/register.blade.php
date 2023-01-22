@@ -1,17 +1,17 @@
 <x-layout>
-<x-slot name="title">Rapido - Register</x-slot> 
+<x-slot name="title">Rapido - Registrar</x-slot> 
 <!-- REGISTER    -->
-<div class="container-fluid bg-accent vh-100">
-   <div class="row mb-5 pb-5">
-      <div class="col-12 col-md-8 ms-5">
-         <div class="d-flex flex-column align-items-center ">
-            <div class="form-content justify-content-center mb-5 pb-5">
+<div class="container-fluid bg-accent" style="height:75vh">
+   <div class="row mb-1 pb-1">
+      <div class="">
+         <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="form-content justify-content-center mb-3 pb-5">
                <!--FORM TITLE --> 
                <div class="section-title">
-                  <h2 class="form-title space-around">
-                     Crear cuenta 
+                  <h3 class="form-title space-around" style="margin-top:30px; margin-bottom:30px;">
+                     {{__('Crear cuenta')}}
                      <!-- <span> Rapido.es</span> --> 
-                  </h2>
+                  </h3>
                </div>
                @if ($errors->any())
                <div class="alert alert-danger">
@@ -23,7 +23,7 @@
                </div>
                @endif
                <!--FORM FIELDS --> 
-               <form action="/register" method="POST" role="form" class="php-email-form">
+               <form action="/register" method="POST" role="form" class="form-control" style="padding:30px; width:600px;">
                   @csrf 
                   <!--Name --> 
                   <div class="form-field-edit form-field space-around my-2">
@@ -42,17 +42,17 @@
                   </div>
                   <!--Password Confirmation --> 
                   <div class="form-field-edit form-field space-around my-2">
-                     <input type="password" name="password_confirmation" id="password" class="form-control forms_field-input" placeholder="Tu contraseña, una vez mas">
+                     <input type="password" name="password_confirmation" id="password" class="form-control forms_field-input" placeholder="Repetir contraseña">
                      <div class="validate"></div>
                   </div>
                   <!--Button-Register--> 
-                  <button type="submit" class=" form-button-edit text-center space-around my-2">
-                  Crear cuenta </button>
+                  <button type="submit" class=" form-button-edit text-center space-around my-2  boton-violeta  sin_decoracion">
+                  {{__('Crear cuenta')}} </button>
                </form>
             </div>
-            <div class="form-link mt-4 d-flex">
-               <p class="text-white">¿ya eres de los nuestros?</p>
-               <a class="text-reset text-decoration-none ps-2" href="{{ route('login')}}"><u>iEntra ya!</u></a> 
+            <div class="form-link d-flex ">
+               <p >{{__('¿Ya eres de los nuestros?')}}</p>
+               <a class="text-reset text-decoration-none ps-3" href="{{ route('login')}}"><u><h5>{{__('¡Entra ya!')}}</h5></u></a> 
             </div>
          </div>
       </div>

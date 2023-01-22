@@ -3,16 +3,16 @@
    <div class="container">
       <div class="row">
          <div class="col-12" id="titulo">
-         <h3 >{{__('Bienvenido a Rapido.es')}}</h3>
+         <h3 >{{__('Bienvenido a Fast.es')}}</h3>
          </div>
       </div>
       <div class="row">
          @forelse($ads as $ad)
         
          <div class="col-12 col-md-4" >
-            <div class="card mb-5 shadow-sm" style="height:650px;">
+            <div class="card mb-5 shadow-sm" style="height:550px;">
             @if ($ad->images()->count() > 0)
-            <img src="{{$ad->images()->first()->getUrl(400,400)}}" class="card-img-top" alt="">
+            <img src="{{$ad->images()->first()->getUrl()}}" class="card-img-top " width="300" height="300" alt="">
             @else
             <img src="https://via.placeholder.com/150" class="card-img-top"  alt="">
                @endif

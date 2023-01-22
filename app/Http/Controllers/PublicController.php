@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\BecomeRevisor;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Ad;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 class PublicController extends Controller
 {
     public function index()
@@ -21,5 +23,11 @@ class PublicController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
+    public function becomeRevisor()
+     {
+        Mail::to('admin@rapido.es')->send(new BecomeRevisor(Auth::user()));
+        return redirect()->route('home')->withMessage(['type'=>'success','text'=>'Solcitud enviada con éxito,
+        pronto sabras algo,gracias!']);
+     }
     
 }

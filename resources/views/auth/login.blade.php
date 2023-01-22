@@ -5,7 +5,7 @@
       <div class="row">
          <div class="col-12 col-md-6 offset-md-3">
             <!--FORM TITLE --> 
-            <h2 class="form-title space-around " style="margin-top:20px; margin-bottom:20px;">Iniciar sesion</h2>
+            <h2 class="form-title space-around " style="margin-top:20px; margin-bottom:20px;">{{__('Iniciar sesion')}}</h2>
             @if ($errors->any()) 
             <div class="alert alert-danger">
                <ul>
@@ -31,10 +31,10 @@
                   <div class="validate"></div>
                </div>
                <!--Button-Login--> 
-               <button type="submit " class="boton-violeta  sin_decoracion boton-padding"> Entrar </button>
+               <button type="submit " class="boton-violeta  sin_decoracion boton-padding">{{__('Entrar')}} </button>
             </form>
             <div style="margin-top:40px; margin-bottom:40px;">
-               <p class="my-3">¿Todavía no eres de los nuestros? <a class="boton-violeta  sin_decoracion" href="{{route('register')}}">iRegistrate!</a> </p>
+               <p class="my-3">{{__('¿Todavía no eres de los nuestros?')}}<a class="boton-violeta  sin_decoracion" href="{{route('register')}}">{{__('¡Registrate!')}}</a> </p>
             </div>
          </div>
       </div>

@@ -1,5 +1,5 @@
 {
-    "Bienvenido a Rapido.es": "Benvenuto su Rapido.es",
+    "Bienvenido a Fast.es": "Benvenuto su Fast.es",
 
 
         "Eliminar":"Cancellare",
@@ -14,7 +14,7 @@
         "coches" : "macchine",
         "motos" : "moto",
         "hogar" : "casa",
-        "electrónica" : "elettrodomestici",
+        "electronica" : "elettrodomestici",
         "móviles" : "cellulari",
         "ordenadores" : "computer",
         "Mostrar Más" : "Mostra di più",
@@ -33,7 +33,7 @@
         "Título" : "Titolo",
         "Precio" : "Prezzo",
         "Descripción" : "Descrizione",
-        "Categoría" : "Categoria",
+        "Categorías" : "Categoria",
         "Seleccionar Categoría" : "Seleziona una categoria",
         "Crear" : "Crea",
         "Publicado el" : "Pubblicato il",
@@ -42,7 +42,7 @@
         "Iniciar sesión" : "Login",
         "Tu correo" : "tua email",
         "Tu contraseña" : "tua Password",
-        "¿Aún no eres de los nuestros?" : "Non sei ancora uno di noi?",
+        "¿Todavía no eres de los nuestros?" : "Non sei ancora uno di noi?",
         "¡Registrate!" : "Registrati!",
         "¿Ya eres de los nuestros?" : "Sei uno di noi?",
         "¡Entra ya!" : "Login",
@@ -54,6 +54,9 @@
         "Política de privacidad" : "Politica di Privacy",
         "Trabaja con nosotros" : "Lavora con noi",
         "Sube Tu Articulo" : "Aggiungi un Articolo"
+        
+        
+
     
     }
 

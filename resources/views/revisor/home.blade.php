@@ -18,7 +18,7 @@
                         @forelse ($ad->images as $image) 
                         <div class="row mb-4">
                         <div class="col-md-4"> 
-                             <img src="{{$image->getUrl(400,400)}}" class="img-fluid" alt="...">
+                             <img src="{{$image->getUrl()}}" class="img-fluid" width="300" height="300" alt="...">
                          </div>
                          <div class="col-md-8">
                            <b>Adult :</b> <i class="bi bi-circle-fill {{ $image->adult}}"></i> [{{ $image->adult }}] <br>
@@ -126,6 +126,8 @@
       </div>
    </div>
    @else
+   <div class='container my-5 py-5' style="height:62vh;">
    <h3 class="text-center">No hay anuncios para revisar,vuelva más tarde,gracias</h3>
+</div>
    @endif
 </x-layout>

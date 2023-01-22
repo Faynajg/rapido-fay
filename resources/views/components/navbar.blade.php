@@ -11,17 +11,21 @@
         <li class="nav-item">
           <a class="nav-link active me-3" style="color:white" aria-current="page" href="{{ route('home')  }}">{{__('Home')}}</a>
         </li>
+        @if (!Auth::user())
         <li class="nav-item">
           <a class="nav-link active me-3" aria-current="page" style="color:white" href="{{ route('login') }}">{{__('Login')}}</a>
         </li>
+        @endif
+        @if (Auth::user())
         <li class="nav-item">
           <form id="logoutForm" action="{{ route ('logout') }}"  method="POST">
             @csrf
           </form>
           <a id="logoutBtn" class="nav-link me-3" style="color:white"  href="#">{{__('Salir')}}</a>
         </li>
-      
+        @endif
         @if  (Auth::user()&& Auth::user()->is_revisor)
+
         <li class="nav-item">
           <a class="nav-link active me-3" aria-current="page" style="color:white" href="{{ route('revisor.home') }}">{{__('Revisar Anuncios')}}
             <span class="badge rounded-pill bg-danger">
@@ -43,6 +47,11 @@
             @endforeach
           </ul>
         </li>
+        @if (Auth::user())
+        <li class="nav-item ">
+         <a class="nav-link active me-3" style="color:white;">{{Auth::user()->name}} </a> 
+        </li>
+        @endif
         <li class="nav-item me-2">
           <x-locale lang="es" country="es" />
         </li>
@@ -54,8 +63,8 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-3 boton-search" type="search" placeholder="Search" aria-label="Search">
-        <button class="boton-violeta me-4 " type="submit">{{__('Search')}}</button>
+        <input class="form-control me-3 boton-search" type="search" placeholder="{{__('Buscar')}}" aria-label="Search">
+        <button class="boton-violeta me-4 " type="submit">{{__('Buscar')}}</button>
       </form>
     </div>
   </div>

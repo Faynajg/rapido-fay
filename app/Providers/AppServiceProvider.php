@@ -25,8 +25,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $locale = session()->get('locale');
+        echo session()->get('locale');
+     
         try {
+           
             $categories= Category::all();
+        if ($locale == "es")
+        { 
+            $categories[0]->name="hola";
+        }
+        else if ($locale == "en"){
+            $categories[0]->name="adios";
+        }
             //$categories[0]->name="hola";
             View::share('categories',$categories);
         } catch(\Throwable $th) {

@@ -3,7 +3,7 @@
    <div class="container">
       <div class="row">
          <div class="col-12">
-            <h1 style="margin-top:20px; margin-bottom:30px;">Anuncios por categoria: {{$category->name}} </h1>
+            <h1 style="margin-top:20px; margin-bottom:30px;">{{__('Anuncios por categoría')}} : {{__($category->name)}} </h1>
          </div>
       </div>
       <div class="row">
@@ -19,7 +19,7 @@
                   <p class="card-text"> {{$ad->body}}</p>
                   <div class="card-subtitle mb-2"> 
                      <strong>
-                        <a href="{{route('category.ads',$ad->category)}}">#{{$category->name}}</a></strong>
+                        <a href="{{route('category.ads',$ad->category)}}">#{{__($ad->category->name)}}</a></strong>
                      <i>{{$ad->created_at->format('d/m/Y')}}</i>
                   </div>
                   <div class="card-subtitle mb-2"> 

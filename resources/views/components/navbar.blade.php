@@ -39,11 +39,42 @@
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle me-3" style="color:white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          @php
+          $locale = session()->get('locale');
+        
+
+          if ($locale == "es")
+        { 
+            $categories[0]->traduccion="Coches";
+            $categories[1]->traduccion="Motos";
+            $categories[2]->traduccion="Hogar";
+            $categories[3]->traduccion="Electrónica";
+            $categories[4]->traduccion="Móviles";
+            $categories[5]->traduccion="Ordenadores";
+        }
+        else if ($locale == "en"){
+          $categories[0]->traduccion="Cars";
+            $categories[1]->traduccion="Motorbike";
+            $categories[2]->traduccion="Home";
+            $categories[3]->traduccion="Electronics";
+            $categories[4]->traduccion="SmartPhones";
+            $categories[5]->traduccion="Computers";
+        }
+        else if ($locale == "it"){
+          $categories[0]->traduccion="Macchine";
+            $categories[1]->traduccion="Motociclette";
+            $categories[2]->traduccion="Casa";
+            $categories[3]->traduccion="Elettronica";
+            $categories[4]->traduccion="Mobile";
+            $categories[5]->traduccion="Computer";
+        }
+          @endphp
           {{__('Categorias')}}
+          
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             @foreach ($categories as $category)
-            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->name}}</a></li>
+            <li><a class="dropdown-item" href="{{route('category.ads',$category)}}">{{$category->traduccion}}</a></li>
             @endforeach
           </ul>
         </li>
